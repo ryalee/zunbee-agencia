@@ -1,0 +1,38 @@
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('../assets/fonts/Outfit-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-family: Outfit, sans-serif;
+
+  --color-main: #ffc300;
+  --color-light: #f4f7f0;
+  --color-dark: #4e4e4e;
+  --color-secondary: #ffefb4;
+  --color-text-alt: #838383;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+.section-title {
+  @apply text-[25pt] font-semibold text-center md:text-[30pt]
+}
+
+.section-subtitle {
+  @apply text-[20pt] text-center
+}
+
+.service-card {
+  @apply bg-[#ffebac] border-3 border-main rounded-[20px] w-100 p-7.5 flex flex-col md:justify-center
+}
