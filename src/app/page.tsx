@@ -23,7 +23,7 @@ export default function Home() {
             width={70}
             height={55}
           />
-          <p className='font-bold text-[30pt] [text-shadow:2px_1px_0px_#4e4e4e]'>Zun<span className='text-main'>Bee</span></p>
+          <p className='font-black text-[30pt]'>Zun<span className='text-main [text-shadow:2px_1px_0px_#4e4e4e]'>Bee</span></p>
         </div>
       </header>
 
@@ -39,17 +39,18 @@ export default function Home() {
         <SloganBottom/>
       </main>
 
-      <footer className="flex flex-col shadow-[0px_2px_4px_#00000025] w-full p-2.5 mt-37.5">
-        <section>
-          <div>
-            <Image
-              src='/logo.webp'
-              alt="logo"
-              width={55}
-              height={55}
-            />
-          </div>
-        </section>
+      <footer className="flex flex-col items-center mx-auto shadow-[0px_0px_4px_#00000035] rounded-md mb-4 w-[90%] px-10 pt-5 mt-37.5">
+        <div className="flex items-center">
+          <Image
+            src='/logo.webp'
+            alt="logo"
+            width={50}
+            height={55}
+          />
+
+          <p className='font-black text-[20pt] '>Zun<span className='text-main [text-shadow:2px_1px_0px_#4e4e4e]'>Bee</span></p>
+        </div>
+          <p className='mt-2 py-5 self-center flex items-center'>&copy; {new Date().getFullYear()} ZunBee. Todos os direitos reservados.</p>
       </footer>
     </>
   );
