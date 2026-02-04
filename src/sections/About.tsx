@@ -10,13 +10,14 @@ function About() {
         </p>
       </div> 
 
-      <Image 
+      <Image
         src="/about.webp"
+        alt="About"
         width={400}
         height={400}
-        sizes="(max-width: 768px) 300px, 400px"
+        sizes="(max-width: 768px) 280px, 400px"
+        quality={70}
         className="absolute mt-15 self-center md:relative"
-        loading="lazy"
       />
     </section>
   )

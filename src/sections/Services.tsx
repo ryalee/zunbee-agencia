@@ -20,9 +20,10 @@ function Services() {
             >
               <Image 
                 src={service.image} alt={service.imageDesc}
-                className='self-center'
                 width={250}
                 height={250}
+                sizes="(max-width: 768px) 200px, 250px"
+                className="self-center"
               />
 
               <h3 className='font-semibold text-[25pt]'>{service.title}</h3>

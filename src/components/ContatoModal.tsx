@@ -2,6 +2,8 @@
 
 import { useState, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 export default function ContatoModal({ onClose }) {
   const [result, setResult] = useState("");
@@ -81,9 +83,7 @@ export default function ContatoModal({ onClose }) {
             rel="noopener noreferrer"
             className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-[15px] mb-5 w-full flex justify-center items-center gap-2 transition"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-              <path d="M12.04 2C6.58 2 2.14 6.44 2.14 11.9c0 1.98.52 3.83 1.52 5.47L2 22l4.78-1.57a9.78 9.78 0 005.26 1.49h.01c5.46 0 9.9-4.44 9.9-9.9 0-5.46-4.44-9.9-9.91-9.9z"/>
-            </svg>
+            <FontAwesomeIcon icon={faWhatsapp} size={20}/>
             Falar pelo WhatsApp
           </a>
 

@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import localFont from 'next/font/local'
+
+const outfit = localFont({
+  src: '../../public/fonts/Outfit-Regular.woff2',
+  variable: '--font-outfit',
+  display: 'swap'
+});
 
 export const metadata: Metadata = {
   title: "ZunBee | Desenvolvimento de software, Apps e Sistemas Web",
@@ -14,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`antialiased`}
+        className={outfit.variable}
         suppressHydrationWarning
       >
         {children}

@@ -1,5 +1,6 @@
 import React from 'react'
 import {feedbacks} from '../data/feedbacks';
+import Image from 'next/image'
 
 function Feedbacks() {
   return (
@@ -11,11 +12,12 @@ function Feedbacks() {
           feedbacks.map((feedback) => (
             <div 
               key={feedback.id}
-              className='flex flex-col gap-5 shadow-[0px_0px_10px_#4e4e4e40] px-3 py-5 rounded-5 md:w-[40%]'
+              className='flex flex-col gap-5 shadow-[0px_0px_10px_#4e4e4e40] px-3 py-5 rounded-lg md:w-[40%]'
             >
-              <img 
+              <Image 
                 src={feedback.open}
-                className='w-12.5'
+                width={40}
+                height={40}
                 alt=''
                 loading="lazy"
               />
@@ -27,9 +29,10 @@ function Feedbacks() {
               <div className='flex items-center justify-between'>
                 <p className='px-3 text-[12pt]'>{feedback.client}</p>
 
-                <img 
+                <Image 
                   src={feedback.close}
-                  className='w-12.5'
+                  width={40}
+                  height={40}
                   alt=''
                   loading="lazy"
                 />

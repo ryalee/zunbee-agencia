@@ -21,8 +21,8 @@ export default function HeaderBanner() {
   }, [words.length]);
 
   return (
-    <div className="flex self-center md:mt-[-40px]">
-      <span className={`transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'} text-[50pt] font-extrabold text-main [text-shadow:_3px_3px_0px_#4e4e4e]`}>
+    <div className="flex self-center md:-mt-10 min-w-65 text-center justify-center items-center">
+      <span className={`transition-opacity text-center duration-500 ${fade ? 'opacity-100' : 'opacity-0'} text-[50pt] font-extrabold text-main [text-shadow:3px_3px_0px_#4e4e4e]`}>
         {words[index]}
       </span>
     </div>

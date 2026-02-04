@@ -23,7 +23,7 @@ export default function Home() {
             width={70}
             height={55}
           />
-          <p className='font-bold text-[30pt] [text-shadow:1px_1px_1px_#4e4e4e]'>Zun<span className='text-main'>Bee</span></p>
+          <p className='font-bold text-[30pt] [text-shadow:2px_1px_0px_#4e4e4e]'>Zun<span className='text-main'>Bee</span></p>
         </div>
       </header>
 
