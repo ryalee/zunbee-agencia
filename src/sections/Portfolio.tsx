@@ -1,17 +1,8 @@
 'use client'
 
 import React, { useState } from 'react';
-import { projects } from '../data/projects.ts';
+import { projects } from '../data/projects';
 import Image from 'next/image'
-
-type Project = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  details: string;
-  link?: string;
-};
 
 function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
