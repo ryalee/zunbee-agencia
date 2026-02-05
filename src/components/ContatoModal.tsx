@@ -5,7 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
-export default function ContatoModal({ onClose }) {
+type ContatoModalProps = {
+  onClose: () => void
+}
+
+export default function ContatoModal({ onClose }: ContatoModalProps) {
   const [result, setResult] = useState("");
   const [isSending, setIsSending] = useState(false);
 
