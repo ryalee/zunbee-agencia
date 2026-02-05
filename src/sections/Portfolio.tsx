@@ -4,8 +4,17 @@ import React, { useState } from 'react';
 import { projects } from '../data/projects.js';
 import Image from 'next/image'
 
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  details: string;
+  link?: string;
+};
+
 function Portfolio() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <section className='px-2.5'>
@@ -16,7 +25,7 @@ function Portfolio() {
 
       {/* Grid de projetos */}
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6 p-4'>
-        {projects.map((project) => (
+        {projects.map((project: Project) => (
           <div
             key={project.id}
             className='relative group cursor-pointer rounded-xl overflow-hidden shadow-md hover:shadow-lg transition'
