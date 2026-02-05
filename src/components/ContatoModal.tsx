@@ -24,7 +24,7 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
   setIsSending(true);
   setResult("Enviando...");
 
-  const form = e.currentTarget; // ✅ form tipado corretamente
+  const form = e.currentTarget;
   const data = new FormData(form);
   data.append("access_key", "e3f0b990-31ba-4ae8-8051-c6c8cbb880f5");
 
@@ -36,7 +36,7 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
 
     if (res.success) {
       setResult("Mensagem enviada com sucesso! 🎉");
-      form.reset(); // ✅ reset correto
+      form.reset(); 
       setTimeout(onClose, 1500);
     } else {
       setResult("Erro ao enviar. Tente novamente ou fale pelo WhatsApp.");
