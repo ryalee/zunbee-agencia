@@ -66,11 +66,14 @@ function Portfolio() {
               ×
             </button>
 
-            <img
-              src={selectedProject.image}
-              alt={selectedProject.title}
-              className='w-full h-64 object-cover rounded-lg'
-            />
+           <Image
+            src={selectedProject.image}
+            alt={selectedProject.title}
+            width={800}
+            height={500}
+            className="w-full h-64 object-cover rounded-lg"
+            sizes="(max-width: 768px) 100vw, 800px"
+          />
 
             <h2 className='text-2xl font-semibold mt-4'>{selectedProject.title}</h2>
             <p className='mt-2 text-gray-700'>{selectedProject.details}</p>
