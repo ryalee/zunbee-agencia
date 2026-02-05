@@ -24,7 +24,7 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
   setIsSending(true);
   setResult("Enviando...");
 
-  const form = e.currentTarget;
+  const form = e.currentTarget; 
   const data = new FormData(form);
   data.append("access_key", "e3f0b990-31ba-4ae8-8051-c6c8cbb880f5");
 
