@@ -25,7 +25,7 @@ function Portfolio() {
 
       {/* Grid de projetos */}
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6 p-4'>
-        {projects.map((project: Project) => (
+        {projects.map((project) => (
           <div
             key={project.id}
             className='relative group cursor-pointer rounded-xl overflow-hidden shadow-md hover:shadow-lg transition'
