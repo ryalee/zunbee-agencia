@@ -19,33 +19,34 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
     return `https://wa.me/${number}?text=${msg}`;
   }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSending(true);
-    setResult("Enviando...");
+ const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setIsSending(true);
+  setResult("Enviando...");
 
-    const data = new FormData(e.target);
-    data.append("access_key", "e3f0b990-31ba-4ae8-8051-c6c8cbb880f5");
+  const form = e.currentTarget; // ✅ form tipado corretamente
+  const data = new FormData(form);
+  data.append("access_key", "e3f0b990-31ba-4ae8-8051-c6c8cbb880f5");
 
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: data,
-      }).then(r => r.json());
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: data,
+    }).then(r => r.json());
 
-      if (res.success) {
-        setResult("Mensagem enviada com sucesso! 🎉");
-        e.target.reset();
-        setTimeout(onClose, 1500);
-      } else {
-        setResult("Erro ao enviar. Tente novamente ou fale pelo WhatsApp.");
-      }
-    } catch {
-      setResult("Erro de conexão. Tente novamente mais tarde.");
+    if (res.success) {
+      setResult("Mensagem enviada com sucesso! 🎉");
+      form.reset(); // ✅ reset correto
+      setTimeout(onClose, 1500);
+    } else {
+      setResult("Erro ao enviar. Tente novamente ou fale pelo WhatsApp.");
     }
+  } catch {
+    setResult("Erro de conexão. Tente novamente mais tarde.");
+  }
 
-    setIsSending(false);
-  }, [onClose]);
+  setIsSending(false);
+}, [onClose]);
 
   return (
     <AnimatePresence>
