@@ -88,7 +88,7 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
             rel="noopener noreferrer"
             className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-[15px] mb-5 w-full flex justify-center items-center gap-2 transition"
           >
-            <FontAwesomeIcon icon={faWhatsapp} size={20}/>
+            <FontAwesomeIcon icon={faWhatsapp} className="text-xl text-white" />
             Falar pelo WhatsApp
           </a>
 
