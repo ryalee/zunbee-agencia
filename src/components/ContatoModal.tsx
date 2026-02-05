@@ -19,7 +19,7 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
     return `https://wa.me/${number}?text=${msg}`;
   }, []);
 
-  const handleSubmit = useCallback(async (e) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSending(true);
     setResult("Enviando...");
