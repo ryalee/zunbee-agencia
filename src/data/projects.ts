@@ -12,8 +12,8 @@ export const projects: Project[] = [
 
   {
     id: 2,
-    title: 'Aplicativo de Organização Pessoal',
-    description: 'Um aplicativo móvel projetado para ajudar a Daniela a organizar suas tarefas, compromissos e metas pessoais de forma eficiente, sem complicações e da maneira que ela buscava.',
+    title: 'Web app de geração de propostas com IA',
+    description: 'Um sistema web que usa IA para gerar propostas para freelancers com base nas necessidades de seus clientes. A IA analisa as informações enviadas e retorna uma proposta personalizada seguindo uma estrutura persuasiva apontando a dor do cliente e entregando a solução.',
     image: '/projeto2.webp',
     details: 'A Daniela buscava um app que fosse simples e suprisse suas necessidades de organização pessoal. O aplicativo oferece funcionalidades como listas de tarefas, lembretes e calendário integrado para planejamento semanal e mensal, tudo com uma interface intuitiva e fácil de usar. Desenvolvido com foco na experiência do usuário, o app ajuda a Daniela a manter sua vida organizada sem estresse. Do jeitinho que ela queria.',
     link: '#',
