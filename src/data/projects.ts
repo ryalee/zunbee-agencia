@@ -15,7 +15,7 @@ export const projects: Project[] = [
     title: 'Web app de geração de propostas com IA',
     description: 'Um sistema web que usa IA para gerar propostas para freelancers com base nas necessidades de seus clientes. A IA analisa as informações enviadas e retorna uma proposta personalizada seguindo uma estrutura persuasiva apontando a dor do cliente e entregando a solução.',
     image: '/projeto2.webp',
-    details: 'A Daniela buscava um app que fosse simples e suprisse suas necessidades de organização pessoal. O aplicativo oferece funcionalidades como listas de tarefas, lembretes e calendário integrado para planejamento semanal e mensal, tudo com uma interface intuitiva e fácil de usar. Desenvolvido com foco na experiência do usuário, o app ajuda a Daniela a manter sua vida organizada sem estresse. Do jeitinho que ela queria.',
+    details: 'Desenvolvido para resolver uma das maiores dores de cabeça do profissional freelancer. A criação de uma boa proposta. A IA gera uma proposta persuasiva utilizando as informações fornecidas focando em uma unica coisa: o SIM do cliente!',
     link: 'https://proposteio-app.vercel.app/',
   },
 
