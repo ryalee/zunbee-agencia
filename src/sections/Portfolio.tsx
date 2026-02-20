@@ -69,7 +69,7 @@ function Portfolio() {
 
             <h2 className='text-2xl font-semibold mt-4'>{selectedProject.title}</h2>
             <p className='mt-2 text-gray-700'>{selectedProject.details}</p>
-            <a href={selectedProject.link}>Veja na prática</a>
+            <a href={selectedProject.link} className='text-main font-bold'>Veja na prática</a>
           </div>
         </div>
       )}
