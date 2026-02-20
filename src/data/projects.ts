@@ -7,7 +7,7 @@ export const projects: Project[] = [
     description: 'Site institucional one-page para o escritório de advocacia Lawys Advocacia, focado em apresentar os serviços jurídicos oferecidos e facilitar o contato com potenciais clientes.',
     image: '/projeto1.webp',
     details: 'Desenvolvido pensando em objetividade e clareza, o site apresenta uma navegação simples e direta, com seções dedicadas aos serviços oferecidos, equipe de advogados e contato. O design é moderno e profissional, refletindo a seriedade sem perder a humanidade. Focado em SEO, o site é otimizado para mecanismos de busca, ajudando a aumentar a visibilidade online do escritório.',
-    link: '#',
+    link: 'https://lawys.vercel.app/',
   },
 
   {
@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description: 'Um sistema web que usa IA para gerar propostas para freelancers com base nas necessidades de seus clientes. A IA analisa as informações enviadas e retorna uma proposta personalizada seguindo uma estrutura persuasiva apontando a dor do cliente e entregando a solução.',
     image: '/projeto2.webp',
     details: 'A Daniela buscava um app que fosse simples e suprisse suas necessidades de organização pessoal. O aplicativo oferece funcionalidades como listas de tarefas, lembretes e calendário integrado para planejamento semanal e mensal, tudo com uma interface intuitiva e fácil de usar. Desenvolvido com foco na experiência do usuário, o app ajuda a Daniela a manter sua vida organizada sem estresse. Do jeitinho que ela queria.',
-    link: '#',
+    link: 'https://proposteio-app.vercel.app/',
   },
 
   {
@@ -34,6 +34,6 @@ export const projects: Project[] = [
     description: 'Site one-page para uma agencia de marketing focada em pequenas e médias empresas, com o objetivo de apresentar os serviços oferecidos e facilitar o contato com potenciais clientes.',
     image: '/projeto4.webp',
     details: 'Desenvolvido com um design moderno e profissional, o site apresenta uma navegação simples e direta, com seções dedicadas aos serviços oferecidos, equipe e contato. Focado em SEO, o site é otimizado para mecanismos de busca, ajudando a aumentar a visibilidade online da agência.',
-    link: '#',
+    link: 'https://busiless-kappa.vercel.app/',
   },
 ]

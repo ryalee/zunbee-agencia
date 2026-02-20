@@ -21,7 +21,7 @@ function Portfolio() {
           <div
             key={project.id}
             className='relative group cursor-pointer rounded-xl overflow-hidden shadow-md hover:shadow-lg transition'
-            onClick={() => setSelectedProject(project)} // ✅ Só abre ao clicar no card
+            onClick={() => setSelectedProject(project)} 
           >
             <Image
               src={project.image}
@@ -45,11 +45,11 @@ function Portfolio() {
       {selectedProject && (
         <div
           className='fixed inset-0 bg-black/70 flex justify-center items-center p-4 z-50'
-          onClick={() => setSelectedProject(null)} // ✅ Fecha ao clicar fora
+          onClick={() => setSelectedProject(null)} // Fecha se clicar fora
         >
           <div
             className='bg-light rounded-2xl shadow-lg max-w-lg w-full px-4 py-10 relative'
-            onClick={(e) => e.stopPropagation()} // ✅ Impede fechar ao clicar dentro
+            onClick={(e) => e.stopPropagation()} // não fecha se clicar dentro
           >
             <button
               className='absolute top-3 right-4 text-2xl font-bold text-dark hover:text-gray-700'
@@ -69,6 +69,7 @@ function Portfolio() {
 
             <h2 className='text-2xl font-semibold mt-4'>{selectedProject.title}</h2>
             <p className='mt-2 text-gray-700'>{selectedProject.details}</p>
+            <a href={selectedProject.link}>Veja na prática</a>
           </div>
         </div>
       )}
