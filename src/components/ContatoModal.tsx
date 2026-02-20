@@ -5,7 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
-export default function ContatoModal({ onClose }) {
+type ContatoModalProps = {
+  onClose: () => void
+}
+
+export default function ContatoModal({ onClose }: ContatoModalProps) {
   const [result, setResult] = useState("");
   const [isSending, setIsSending] = useState(false);
 
@@ -15,33 +19,34 @@ export default function ContatoModal({ onClose }) {
     return `https://wa.me/${number}?text=${msg}`;
   }, []);
 
-  const handleSubmit = useCallback(async (e) => {
-    e.preventDefault();
-    setIsSending(true);
-    setResult("Enviando...");
+ const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setIsSending(true);
+  setResult("Enviando...");
 
-    const data = new FormData(e.target);
-    data.append("access_key", "e3f0b990-31ba-4ae8-8051-c6c8cbb880f5");
+  const form = e.currentTarget as HTMLFormElement;
+  const data = new FormData(form);
+  data.append("access_key", "e3f0b990-31ba-4ae8-8051-c6c8cbb880f5");
 
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: data,
-      }).then(r => r.json());
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: data,
+    }).then(r => r.json());
 
-      if (res.success) {
-        setResult("Mensagem enviada com sucesso! 🎉");
-        e.target.reset();
-        setTimeout(onClose, 1500);
-      } else {
-        setResult("Erro ao enviar. Tente novamente ou fale pelo WhatsApp.");
-      }
-    } catch {
-      setResult("Erro de conexão. Tente novamente mais tarde.");
+    if (res.success) {
+      setResult("Mensagem enviada com sucesso! 🎉");
+      form.reset();
+      setTimeout(onClose, 1500);
+    } else {
+      setResult("Erro ao enviar. Tente novamente ou fale pelo WhatsApp.");
     }
+  } catch {
+    setResult("Erro de conexão. Tente novamente mais tarde.");
+  }
 
-    setIsSending(false);
-  }, [onClose]);
+  setIsSending(false);
+}, [onClose]);
 
   return (
     <AnimatePresence>
@@ -83,7 +88,7 @@ export default function ContatoModal({ onClose }) {
             rel="noopener noreferrer"
             className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-[15px] mb-5 w-full flex justify-center items-center gap-2 transition"
           >
-            <FontAwesomeIcon icon={faWhatsapp} size={20}/>
+            <FontAwesomeIcon icon={faWhatsapp} className="text-xl text-white" />
             Falar pelo WhatsApp
           </a>
 
