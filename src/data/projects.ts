@@ -25,7 +25,7 @@ export const projects: Project[] = [
     description: 'Um app web que permite o controle financeiro e análise de desempenho do negócio com auxílio de Inteligencia Artificial, tudo em um só lugar e com uma interface que nosso cliente estava buscando.',
     image: '/projeto3.webp',
     details: 'Nosso cliente estava precisando de uma ferramenta que analisasse suas planilhas e gerasse insights para melhorar a gestão do negócio. O aplicativo web oferece funcionalidades como controle financeiro, análise de desempenho e geração de relatórios personalizados, tudo com o suporte de Inteligência Artificial para facilitar a tomada de decisões. Com uma interface amigável e acessível, o app ajuda nosso cliente a otimizar suas operações e alcançar melhores resultados. Do jeito que ele queria.',
-    link: '#',
+    link: 'https://dashub-three.vercel.app/',
   },
 
   {
