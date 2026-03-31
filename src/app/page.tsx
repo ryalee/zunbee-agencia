@@ -25,10 +25,6 @@ export default function Home() {
           />
           <p className='font-black text-[30pt]'>Zun<span className='text-main [text-shadow:2px_1px_0px_#4e4e4e]'>Bee</span></p>
         </div>
-        
-        <div>
-          <img src="https://img.icons8.com/ios11/512/linkedin.png"/>
-        </div>
       </header>
 
       <main className="flex flex-col gap-37.5">
