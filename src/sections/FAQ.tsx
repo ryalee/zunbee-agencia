@@ -15,7 +15,7 @@ function FAQ() {
           questions.map((question) => (
             <div 
               key={question.id}
-              className='flex flex-col border-4 border-main p-3.75 gap-2 rounded-5'
+              className='flex flex-col border-4 border-main p-3.75 gap-2 rounded-xl'
             >
               <h1 className='text-[16pt] font-bold'>{question.question}</h1>
               <p className='text-[13pt]'>{question.answer}</p>

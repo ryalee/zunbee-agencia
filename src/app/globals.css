@@ -21,13 +21,13 @@ body {
 }
 
 .section-title {
-  @apply text-[25pt] font-semibold text-center md:text-[30pt] 
+  @apply text-[25pt] font-semibold text-center md:text-[30pt];
 }
 
 .section-subtitle {
-  @apply text-[20pt] text-center
+  @apply text-[20pt] text-center;
 }
 
 .service-card {
-  @apply bg-[#ffebac] border-3 border-main rounded-[20px] w-100 p-7.5 flex flex-col md:justify-center
+  @apply bg-[#ffebac] border-3 border-main rounded-[20px] w-100 p-7.5 flex flex-col md:justify-center;
 }

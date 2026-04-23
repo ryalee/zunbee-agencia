@@ -17,20 +17,26 @@ function Hero() {
         </h1>
 
         <div className="flex flex-col md:flex-row md:justify-evenly md:-mt-5 md:self-center md:px-5 md:items-center">
-          <Image
-            src="/hero.webp"
-            alt="Hero"
-            width={392}
-            height={392}
-            sizes="(max-width: 768px) 280px, 392px"
-            quality={70}
-            priority
-            fetchPriority="high"
-            className="mt-15 self-center"
-          />
+          <div>
+            <span className="bg-white p-3 text-xs md:text-sm rounded-lg shadow-sm absolute mt-15">Avaliação 5.0 ⭐</span>
+
+            <Image
+              src="/hero.webp"
+              alt="Hero"
+              width={392}
+              height={392}
+              sizes="(max-width: 768px) 280px, 392px"
+              quality={70}
+              priority
+              fetchPriority="high"
+              className="mt-15 self-center"
+            />
+
+            <span className="bg-white p-3 text-xs md:text-sm rounded-lg shadow-sm absolute -mt-15 ml-50">🟢 +60 projetos entregues</span>
+          </div>
 
           <div className="flex flex-col md:w-[60%]">
-            <p className="font-medium text-[19pt] text-right md:text-[25pt] md:w-[80%] md:self-end">
+            <p className="font-medium text-[19pt] text-center md:text-[25pt] md:w-[80%] md:self-end">
               Criatividade + estratégia = resultado. Essa é a fórmula que usamos para destacar sua marca.
             </p>
 

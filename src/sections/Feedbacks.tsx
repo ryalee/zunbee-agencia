@@ -7,7 +7,7 @@ function Feedbacks() {
     <section className='px-2.5'>
       <h1 className='section-title'>Depoimentos de Clientes Satisfeitos</h1>
 
-      <div className='flex flex-col gap-12.50 mt-10 px-5 md:flex-row md:gap-5'>
+      <div className='flex flex-col gap-12 mt-10 px-5 md:flex-row md:gap-5'>
         {
           feedbacks.map((feedback) => (
             <div 
