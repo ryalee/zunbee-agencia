@@ -1,12 +1,43 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { projects } from '../data/projects';
 import type { Project } from "../types";
 import Image from 'next/image'
 
 function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [renderAllProjects, setRenderAllProjects] = useState(false);
+  const [animateExtrasIn, setAnimateExtrasIn] = useState(false);
+  const collapseTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const visibleProjects = renderAllProjects ? projects : projects.slice(0, 4);
+
+  const handleToggleProjects = () => {
+    if (isExpanded) {
+      setIsExpanded(false);
+      setAnimateExtrasIn(false);
+
+      collapseTimeoutRef.current = setTimeout(() => {
+        setRenderAllProjects(false);
+      }, 280);
+      return;
+    }
+
+    setRenderAllProjects(true);
+    requestAnimationFrame(() => {
+      setIsExpanded(true);
+      setAnimateExtrasIn(true);
+    });
+  };
+
+  useEffect(() => {
+    return () => {
+      if (collapseTimeoutRef.current) {
+        clearTimeout(collapseTimeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <section className='px-2.5'>
@@ -17,10 +48,19 @@ function Portfolio() {
 
       {/* Grid de projetos */}
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6 p-4'>
-        {projects.map((project) => (
+        {visibleProjects.map((project, index) => {
+          const isExtraProject = index >= 4;
+
+          return (
           <div
             key={project.id}
-            className='relative group cursor-pointer rounded-xl overflow-hidden shadow-md hover:shadow-lg transition'
+            className={`relative group cursor-pointer rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 ${
+              isExtraProject
+                ? animateExtrasIn
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 -translate-y-2'
+                : 'opacity-100 translate-y-0'
+            }`}
             onClick={() => setSelectedProject(project)} 
           >
             <Image
@@ -38,8 +78,21 @@ function Portfolio() {
               <p className='text-sm mt-2 text-center'>{project.description}</p>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
+
+      {projects.length > 4 && (
+        <div className='cursor-pointer flex justify-center mt-4'>
+          <button
+            type='button'
+            className='cursor-pointer bg-main text-light px-6 py-2 rounded-full font-semibold hover:opacity-90 transition'
+            onClick={handleToggleProjects}
+          >
+            {isExpanded ? 'ver menos' : 'ver mais'}
+          </button>
+        </div>
+      )}
 
       {/* Modal */}
       {selectedProject && (
