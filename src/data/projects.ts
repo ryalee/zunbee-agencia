@@ -36,4 +36,37 @@ export const projects: Project[] = [
     details: 'Desenvolvido com um design moderno e profissional, o site apresenta uma navegação simples e direta, com seções dedicadas aos serviços oferecidos, equipe e contato. Focado em SEO, o site é otimizado para mecanismos de busca, ajudando a aumentar a visibilidade online da agência.',
     link: 'https://busiless-kappa.vercel.app/',
   },
+
+  {
+    id: 5,
+    title: 'Maison Arquitetura',
+    description: 'Uma página institucional para a Maison Arquitetura, focada em apresentar os serviços oferecidos e facilitar o contato com potenciais clientes.',
+    image: '/projeto5.webp',
+    details: 'Desenvolvido com um design moderno e profissional, o site apresenta uma navegação simples e direta, com seções dedicadas aos serviços oferecidos, equipe e contato. Focado em SEO, o site é otimizado para mecanismos de busca, ajudando a aumentar a visibilidade online da agência.',
+    link: 'https://maisonarquitetura.vercel.app/',
+  },
+  {
+    id: 6,
+    title: 'Orbit',
+    description: 'Um site para a agencia de marketing Orbit, focado em apresentar os serviços oferecidos e facilitar o contato com potenciais clientes.',
+    image: '/projeto6.webp',
+    details: 'Site com visual tech e moderno otimizado para SEO, ajudando a aumentar a visibilidade online da agência.',
+    link: 'https://orbitmarketing.vercel.app/',
+  },
+  {
+    id: 7,
+    title: 'Psicologa Ana Souza',
+    description: 'Uma página institucional para a Psicologa Ana Souza, focada em apresentar os serviços oferecidos e facilitar o contato com potenciais clientes.',
+    image: '/projeto7.webp',
+    details: 'Site com visual moderno e profissional, focado em SEO, ajudando a aumentar a visibilidade online da psicóloga.',
+    link: 'https://psianasz.vercel.app/',
+  },
+  {
+    id: 8,
+    title: 'RNGEO',
+    description: 'Uma página institucional para a RNGEO, focada em apresentar os serviços de ESG e facilitar o contato com potenciais clientes.',
+    image: '/projeto8.webp',
+    details: 'Site com visual moderno e profissional, focado em SEO, ajudando a aumentar a visibilidade online da engenharia.',
+    link: 'https://rngeo.com/',
+  },
 ]
