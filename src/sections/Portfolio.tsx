@@ -69,6 +69,7 @@ function Portfolio() {
               width={418}
               height={256}
               sizes="(max-width: 768px) 100vw, 418px"
+              unoptimized
               className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
             />
 

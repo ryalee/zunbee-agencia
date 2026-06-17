@@ -3,13 +3,12 @@ import type { Project } from "../types";
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Lawys Advocacia',
-    description: 'Site institucional one-page para o escritório de advocacia Lawys Advocacia, focado em apresentar os serviços jurídicos oferecidos e facilitar o contato com potenciais clientes.',
-    image: '/projeto1.webp',
-    details: 'Desenvolvido pensando em objetividade e clareza, o site apresenta uma navegação simples e direta, com seções dedicadas aos serviços oferecidos, equipe de advogados e contato. O design é moderno e profissional, refletindo a seriedade sem perder a humanidade. Focado em SEO, o site é otimizado para mecanismos de busca, ajudando a aumentar a visibilidade online do escritório.',
-    link: 'https://lawys.vercel.app/',
+    title: 'Raízes Imóveis',
+    description: 'Uma página portfólio para a imobiliária Raízes Imóveis. Feita pensando em transmitir a essência da marca e mostrar seus imoveis',
+    image: '/projeto9.png',
+    details: 'Site com visual moderno, profissional e com aspecto luxuoso e minimalista.',
+    link: 'https://raizesimoveis.vercel.app/',
   },
-
   {
     id: 2,
     title: 'Web app de geração de propostas com IA',
@@ -68,5 +67,13 @@ export const projects: Project[] = [
     image: '/projeto8.webp',
     details: 'Site com visual moderno e profissional, focado em SEO, ajudando a aumentar a visibilidade online da engenharia.',
     link: 'https://rngeo.com/',
+  },
+  {
+    id: 9,
+    title: 'Lawys Advocacia',
+    description: 'Site institucional one-page para o escritório de advocacia Lawys Advocacia, focado em apresentar os serviços jurídicos oferecidos e facilitar o contato com potenciais clientes.',
+    image: '/projeto1.webp',
+    details: 'Desenvolvido pensando em objetividade e clareza, o site apresenta uma navegação simples e direta, com seções dedicadas aos serviços oferecidos, equipe de advogados e contato. O design é moderno e profissional, refletindo a seriedade sem perder a humanidade. Focado em SEO, o site é otimizado para mecanismos de busca, ajudando a aumentar a visibilidade online do escritório.',
+    link: 'https://lawys.vercel.app/',
   },
 ]
