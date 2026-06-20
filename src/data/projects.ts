@@ -76,4 +76,12 @@ export const projects: Project[] = [
     details: 'Desenvolvido pensando em objetividade e clareza, o site apresenta uma navegação simples e direta, com seções dedicadas aos serviços oferecidos, equipe de advogados e contato. O design é moderno e profissional, refletindo a seriedade sem perder a humanidade. Focado em SEO, o site é otimizado para mecanismos de busca, ajudando a aumentar a visibilidade online do escritório.',
     link: 'https://lawys.vercel.app/',
   },
+  {
+    id: 10,
+    title: "Aethel | Clínica de Estética",
+    description: "Site premium para uma clinica de estética focado em exibir serviços e facilitar contato.",
+    image: "/projeto10.png",
+    details: "Focado em atrair clientes a altura, mostrar trabalhos e facilitar o contato",
+    link: "https://aethelestetica.vercel.app/",
+  }
 ]
