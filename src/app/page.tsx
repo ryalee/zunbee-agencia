@@ -26,14 +26,6 @@ export default function Home() {
             </span>
           </p>
         </div>
-
-        <Link
-          href="https://www.linkedin.com/in/ryan-alecrim-sodre"
-          target="_blank"
-          className="w-13 opacity-50 hover:opacity-100 transition-opacity duration-300"
-        >
-          <Image src={"/linkedin.webp"} alt="LinkedIn" width={50} height={50} />
-        </Link>
       </header>
 
       <main className="flex flex-col gap-37.5">
