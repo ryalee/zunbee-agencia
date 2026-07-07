@@ -42,6 +42,13 @@ function Hero() {
 
             <div className="flex flex-col gap-10 self-center mt-5 md:flex-row">
               <BotaoContato />
+              
+              <a 
+                href="/blog"
+                className="text-dark px-5 py-3 transition hover:scale-105 duration-300 cursor-pointer border-b-3 border-dark hover:text-main hover:border-main font-semibold"
+              >
+                Artigos publicados
+              </a>
             </div>
           </div>
         </div>

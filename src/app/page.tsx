@@ -16,7 +16,7 @@ import SloganBottom from "../sections/SloganBottom";
 export default function Home() {
   return (
     <>
-      <header className="p-5 flex justify-between items-center">
+      <header className="py-5 px-10 flex justify-between items-center">
         <div className="flex items-center gap-1">
           <Image src="/logo.webp" alt="logo" width={70} height={55} />
           <p className="font-black text-[30pt]">
@@ -26,9 +26,18 @@ export default function Home() {
             </span>
           </p>
         </div>
+
+        <Link href="https://www.instagram.com/zunbee.software/" target="_blank">
+          <Image
+            src="/Instagram.webp"
+            alt="Instagram"
+            width={45}
+            height={45}
+          />
+        </Link>
       </header>
 
-      <main className="flex flex-col gap-37.5">
+      <main className="flex flex-col mt-10 gap-37.5">
         <Hero />
         <About />
         <Services />
