@@ -6,8 +6,8 @@ function Steps() {
   return (
     <section className='px-2.5'>
       <div>
-        <h1 className='section-title'>Como tiramos suas ideias do papel</h1>
-        <p className='section-subtitle'>Visão geral e técnica do nosso trabalho</p>
+        <h1 className='section-title'>Como tiro suas ideias do papel</h1>
+        <p className='section-subtitle'>Visão geral e técnica do meu trabalho</p>
       </div>
 
       {

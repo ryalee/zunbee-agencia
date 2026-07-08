@@ -42,8 +42,8 @@ function Portfolio() {
   return (
     <section className='px-2.5'>
       <div>
-        <h1 className='section-title'>O que já criamos até aqui?</h1>
-        <h2 className='section-subtitle'>Projetos que falam por nós</h2>
+        <h1 className='section-title'>O que já criei até aqui?</h1>
+        <h2 className='section-subtitle'>Projetos que falam por mim</h2>
       </div>
 
       {/* Grid de projetos */}

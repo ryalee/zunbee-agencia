@@ -37,7 +37,7 @@ function Hero() {
 
           <div className="flex flex-col md:w-[60%]">
             <p className="font-medium text-[19pt] text-center md:text-[25pt] md:w-[80%] md:self-end">
-              Criatividade + estratégia = resultado. Essa é a fórmula que usamos para destacar sua marca.
+              Criatividade + estratégia = resultado. Essa é a fórmula que uso para destacar sua marca.
             </p>
 
             <div className="flex flex-col gap-10 self-center mt-5 md:flex-row">

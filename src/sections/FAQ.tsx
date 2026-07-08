@@ -7,7 +7,7 @@ function FAQ() {
     <section className='px-2.5'>
       <div>
         <h1 className='section-title'>FAQ</h1>
-        <p className='section-subtitle'>Dúvidas que recebemos frequentemente</p>
+        <p className='section-subtitle'>Dúvidas que recebo frequentemente</p>
       </div>
 
       <div className='flex flex-col gap-7.5 mt-10 md:px-7.5'>
