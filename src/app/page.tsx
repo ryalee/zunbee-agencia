@@ -37,7 +37,7 @@ export default function Home() {
         </Link>
       </header>
 
-      <main className="flex flex-col mt-10 gap-37.5">
+      <main className="flex flex-col mt-5 gap-37.5">
         <Hero />
         <About />
         <Services />
