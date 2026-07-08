@@ -45,7 +45,7 @@ function Hero() {
               
               <a 
                 href="/blog"
-                className="text-dark px-5 py-3 transition hover:scale-105 duration-300 cursor-pointer border-b-3 border-dark hover:text-main hover:border-main font-semibold"
+                className="text-dark px-5 py-3 transition hover:scale-105 duration-300 cursor-pointer border-b-3 border-dark hover:text-main hover:border-main font-semibold text-center"
               >
                 Artigos publicados
               </a>
