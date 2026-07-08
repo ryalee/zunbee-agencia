@@ -31,6 +31,7 @@ function getArticles() {
       };
     });
 
+  // Ordenação por data (Mais recente primeiro)
   return allPosts.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
@@ -62,7 +63,7 @@ export default function BlogPage() {
         </Link>
       </header>
 
-      {/* HERO */}
+      {/* HERO / DESTAQUE */}
       <section className="max-w-7xl mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
         <div className="flex flex-col text-center md:text-left">
           <h1 className="text-[30pt] font-bold tracking-tight mx-auto flex md:text-[45pt] md:mx-0 items-center">
@@ -85,11 +86,11 @@ export default function BlogPage() {
         </div>
 
         {/* Card de Destaque Real */}
-        <div className="flex flex-col mx-auto">
+        <div className="flex flex-col mx-auto w-full">
           {postMaisRecente ? (
             <PostDestaque post={postMaisRecente} />
           ) : (
-            <div className="border-2 border-dashed border-gray-200 rounded-2xl p-12 text-center text-gray-400 bg-white">
+            <div className="border-2 border-dashed border-gray-200 rounded-2xl p-12 text-center text-gray-400 bg-white w-full">
               Nenhum artigo publicado ainda na pasta /articles.
             </div>
           )}
@@ -98,28 +99,28 @@ export default function BlogPage() {
 
       {/* SEÇÃO DEMAIS POSTS */}
       {demaisPosts.length > 0 && (
-        <section className="border-t border-gray-200 pt-12">
-          <h3 className="text-xl font-bold mb-6">Próximas leituras</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="border-t border-gray-200 mx-10 md:mx-20 py-12">
+          <h3 className="text-xl font-bold mb-6 text-gray-900">Próximas leituras</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {demaisPosts.map((post) => (
-              <div
+              <Link
                 key={post.slug}
-                className="border border-gray-100 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-between"
+                href={`/blog/${post.slug}`}
+                className="group border border-gray-100 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-between hover:scale-[1.02] hover:border-gray-200 transition-all duration-300 cursor-pointer"
               >
                 <div>
-                  <span className="text-xs">{post.date}</span>
-                  <h4 className="font-bold text-gray-900 mt-1 mb-2 line-clamp-2">
+                  <span className="text-xs text-gray-400">{post.date}</span>
+                  <h4 className="font-bold text-gray-900 mt-1 mb-2 line-clamp-2 group-hover:text-yellow-600 transition-colors">
                     {post.title}
                   </h4>
-                  <p className="text-sm  line-clamp-2 mb-4">{post.excerpt}</p>
+                  <p className="text-sm text-gray-500 line-clamp-2 mb-4">{post.excerpt}</p>
                 </div>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="text-sm text-yellow-600 font-semibold hover:underline inline-flex items-center gap-1"
-                >
-                  Acessar post →
-                </Link>
-              </div>
+                
+                <span className="text-sm text-yellow-600 font-semibold inline-flex items-center gap-1 mt-auto group-hover:underline">
+                  Acessar artigo →
+                </span>
+              </Link>
             ))}
           </div>
         </section>
