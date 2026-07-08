@@ -56,7 +56,7 @@ export default function BlogPage() {
 
         <Link
           href="/"
-          className="text-sm text-gray-500 hover:text-main transition-colors mb-8 inline-flex items-center gap-1"
+          className="text-lg text-gray-500 hover:text-main transition-colors mb-8 inline-flex items-center gap-1"
         >
           ← Voltar
         </Link>
