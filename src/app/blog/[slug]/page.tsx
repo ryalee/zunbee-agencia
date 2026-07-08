@@ -4,9 +4,14 @@ import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import ContatoButton from '../../../components/BotaoContato';
 
 interface Props {
   params: Promise<{ slug: string }>;
+}
+
+const mdxComponents = {
+  ContatoButton:(props: any) => <ContatoButton className="w-full"/>,
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -68,9 +73,8 @@ export default async function PostPage({ params }: Props) {
 
         {/* Corpo do Artigo aplicando espaçamentos padrões para o Markdown */}
         <article className="prose text-gray-800 leading-relaxed space-y-6 text-lg">
-          <MDXRemote source={content} />
+          <MDXRemote source={content} components={mdxComponents} />
         </article>
-        
       </div>
     </div>
   );

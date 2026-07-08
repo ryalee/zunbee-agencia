@@ -64,8 +64,8 @@ export default function BlogPage() {
 
       {/* HERO */}
       <section className="max-w-7xl mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-        <div>
-          <h1 className="text-5xl font-bold tracking-tight flex items-center gap-2">
+        <div className="flex flex-col text-center md:text-left">
+          <h1 className="text-[30pt] font-bold tracking-tight mx-auto flex md:text-[45pt] md:mx-0 items-center">
             Radar Zun
             <span className="text-main [text-shadow:2px_1px_0px_#4e4e4e]">
               Bee
@@ -77,20 +77,23 @@ export default function BlogPage() {
               height={50}
             />
           </h1>
-          <p className="mt-4 text-lg  leading-relaxed max-w-md">
+
+          <p className="mt-4 text-[19pt] leading-relaxed md:text-[25pt] md:w-full">
             Artigos práticos sobre tecnologia, engenharia de software e como
             escalar seu negócio digital.
           </p>
         </div>
 
         {/* Card de Destaque Real */}
-        {postMaisRecente ? (
-          <PostDestaque post={postMaisRecente} />
-        ) : (
-          <div className="border-2 border-dashed border-gray-200 rounded-2xl p-12 text-center text-gray-400 bg-white">
-            Nenhum artigo publicado ainda na pasta /articles.
-          </div>
-        )}
+        <div className="flex flex-col mx-auto">
+          {postMaisRecente ? (
+            <PostDestaque post={postMaisRecente} />
+          ) : (
+            <div className="border-2 border-dashed border-gray-200 rounded-2xl p-12 text-center text-gray-400 bg-white">
+              Nenhum artigo publicado ainda na pasta /articles.
+            </div>
+          )}
+        </div>
       </section>
 
       {/* SEÇÃO DEMAIS POSTS */}

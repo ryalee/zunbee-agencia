@@ -15,7 +15,7 @@ export default function PostDestaque({ post }: PostProps) {
   if (!post) return null;
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden p-6 w-full flex flex-col justify-between transition-all duration-300 hover:shadow-md">
+    <div className="bg-white rounded-2xl border self-center border-gray-100 shadow-sm overflow-hidden p-6 w-[90%] md:w-full flex flex-col justify-between transition-all duration-300 hover:shadow-md">
       
       {/* Imagem de Capa */}
       <div className="relative h-60 w-full mb-5 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center border border-gray-100">
