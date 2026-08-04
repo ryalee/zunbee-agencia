@@ -88,7 +88,7 @@ export const projects: Project[] = [
     id: 11,
     title: "Lumina Estética | Agendamento ",
     description: "Aplicativo premium para agendamentos de clinica de estética focado em facilitar o contato, agendamento e visualização do processo.",
-    image: "/projeto1q.png",
+    image: "/projeto11.png",
     details: "Focado em atrair e agendar clientes a altura, mostrar trabalhos e facilitar o contato",
     // link: "aplicativo indisponível",
   }
