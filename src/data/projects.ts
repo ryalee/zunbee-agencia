@@ -83,5 +83,13 @@ export const projects: Project[] = [
     image: "/projeto10.png",
     details: "Focado em atrair clientes a altura, mostrar trabalhos e facilitar o contato",
     link: "https://aethelestetica.vercel.app/",
+  },
+  {
+    id: 11,
+    title: "Lumina Estética | Agendamento ",
+    description: "Aplicativo premium para agendamentos de clinica de estética focado em facilitar o contato, agendamento e visualização do processo.",
+    image: "/projeto1q.png",
+    details: "Focado em atrair e agendar clientes a altura, mostrar trabalhos e facilitar o contato",
+    // link: "aplicativo indisponível",
   }
 ]
